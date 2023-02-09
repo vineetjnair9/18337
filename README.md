@@ -107,7 +107,9 @@ maintain performance. This is a whole new way to see calculus, not the way you l
 
 # Homeworks
 
-Stay tuned.
+HW1 will be due Thursday Feb 16.  This is really just a getting started homework.  
+
+[Hw1](https://mitmath.github.io/18337/hw1/hw1.html)
 
 # Final Project
 
