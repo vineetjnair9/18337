@@ -37,6 +37,11 @@ Final Project presentations : April 26 to May 15
 
 Final Project reports due: May 15
 
+# HW
+|#| Notebook|
+|-|-|
+|1| [HW1](https://mitmath.github.io/18337/hw1/hw1.html) |
+(For matrix calculus problems, do not use indices)
 
 # Lecture Schedule (tentative) (Warning: links currently out of phase starting with lecture 3)
 |#|Day| Date |  Topic | [SciML](https://book.sciml.ai/) lecture | Materials |
