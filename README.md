@@ -105,6 +105,9 @@ are unlikely to be aware.  The second [AutoDiff]](https://github.com/mitmath/183
 of forward mode autodifferentiation showing how a compiler can "rewrite" a program through the use of software overloading and still
 maintain performance. This is a whole new way to see calculus, not the way you learned it in a first year class, and not finite differences either.
 
+## Lecture 2:  The Parallel Dream and Intro to Matrix Calculus
+We gave an example 
+[The Parallel Dream]](https://github.com/mitmath/18337/blob/master/lecture1/the_dream.ipynb)
 
 
 ### Lecture and Notes
