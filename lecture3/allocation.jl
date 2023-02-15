@@ -5,10 +5,19 @@ using Markdown
 using InteractiveUtils
 
 # ╔═╡ 670f41d2-882c-11ec-1232-b53f49123cfe
-using PlutoUI, BenchmarkTools
+using PlutoUI, BenchmarkTools, LinearAlgebra
 
 # ╔═╡ 5dccaff9-d326-4a71-a54a-7b3288bddecf
 using StaticArrays
+
+# ╔═╡ a749af3f-a4c8-4531-8f2f-2cad0b99cd10
+let
+	# 1. Caches - how they impact performance
+	BLAS.set_num_threads(1)
+	n = 1000
+	A = randn(n,n)
+	B = randn(n,n);
+end
 
 # ╔═╡ 3f72ae62-29dd-44c9-9571-075e0e87175f
 md"""
@@ -92,6 +101,13 @@ end
 
 # ╔═╡ c90543f8-5c73-463e-b796-28755223e7e8
 A = Object(10,1)
+
+# ╔═╡ 2f999998-3908-4ec4-8e49-1bfcb0f563ef
+begin
+	# Rate of computation = (ops)/(time) in gigaflops
+	(2n^3)/(@elapsed A*A)/1e9
+	(n^2)/(@elapsed A.+A)/1e
+end
 
 # ╔═╡ 8b7d204d-2774-4f39-90c0-9abd4b92d970
 # analog would  work in python
@@ -298,6 +314,7 @@ end
 PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 
@@ -313,7 +330,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.8.0-rc4"
 manifest_format = "2.0"
-project_hash = "f454d3403ace13fceef8ffee619c7020548829f7"
+project_hash = "e57715669a528e29932e2ca28260116abbdf64e1"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
@@ -586,6 +603,8 @@ version = "17.4.0+0"
 
 # ╔═╡ Cell order:
 # ╠═670f41d2-882c-11ec-1232-b53f49123cfe
+# ╠═a749af3f-a4c8-4531-8f2f-2cad0b99cd10
+# ╠═2f999998-3908-4ec4-8e49-1bfcb0f563ef
 # ╟─3f72ae62-29dd-44c9-9571-075e0e87175f
 # ╠═b5d0c163-b718-4954-b50c-37532941ae79
 # ╟─3ae89b96-7b73-4b52-a52d-f2808ed72b39

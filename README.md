@@ -48,7 +48,8 @@ Final Project reports due: May 15
 |-|-|------|------|-----|--|
 |1|M| 2/6 | Intro to Julia.  My Two Favorite Notebooks. |  |   [[Julia is fast]](https://github.com/mitmath/18337/blob/master/lecture1/Julia%20is%20fast.ipynb), [[AutoDiff]](https://github.com/mitmath/18337/blob/master/lecture1/AutoDiff.ipynb), [[autodiff video]](https://www.youtube.com/watch?v=vAp6nUMrKYg),
 |2|W|2/8| Matrix Calculus I  and The Parallel Dream| | See [[IAP 2023 Class on Matrix Calculus]](https://github.com/mitmath/matrixcalc),[[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture2/matrix_calculus_handwritten_notes_02_08_2023.pdf),[[The Parallel Dream]](https://github.com/mitmath/18337/blob/master/lecture1/the_dream.ipynb)
-|3|M|2/13| Matrix Calculus II |[2][2]| [[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture3/lecture_3_handwritten_2023.pdf),[[Corgi in the Washing Machine]](https://mit-c25.netlify.app/notebooks/1_hyperbolic_corgi),[[2x2 Matrix Jacobians]](https://rawcdn.githack.com/mitmath/matrixcalc/3f6758996e40c5c1070279f89f7f65e76e08003d/notes/2x2Jacobians.jl.html)
+|3|M|2/13| Matrix Calculus II || [[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture3/lecture_3_handwritten_2023.pdf),[[Corgi in the Washing Machine]](https://mit-c25.netlify.app/notebooks/1_hyperbolic_corgi),[[2x2 Matrix Jacobians]](https://rawcdn.githack.com/mitmath/matrixcalc/3f6758996e40c5c1070279f89f7f65e76e08003d/notes/2x2Jacobians.jl.html)
+|4|W|2/15| Serial Performance | [[2]][2] | [[Loop Fusion Blog ]](https://julialang.org/blog/2017/01/moredots/)
 |4|W|2/15| Automatic differentiation I : Forward mode AD |[8][8] |   [[video 1]](https://youtu.be/C3vf9ZFYbjI)      [[video2]](https://youtu.be/hKHl68Fdpq4) 
 |5|T|2/21| Automatic differentiation II : Reverse mode AD |[10][10]|  [[video]](https://www.youtube.com/watch?v=eca6kcFntiE)|
 |6|W|2/22| Models of Parallelism |[6][6]|  [[video]](https://www.youtube.com/watch?v=EP5VWwPIews)
