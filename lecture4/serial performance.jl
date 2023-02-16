@@ -33,7 +33,7 @@ end
 
 # 3. The stack vs the heap
 
-# 3a.  Arrays goes on the heap but have few allocations
+# 3a.  Arrays go on the heap but have few allocations
 @btime a = 100;  # This goes on the stack (0 allocations)
 # All arrays live on the heap
 @btime a = rand(10,10); # This creates one pointer (1 allocation)
