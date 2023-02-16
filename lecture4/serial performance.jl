@@ -67,6 +67,7 @@ function add_and_store(a,b)
 end
 @btime add_and_store(a,b);
 
+# adding ! to the function name indicates that the function changes it's first argument (mutation)
 function add_and_store!(c,a,b)  # function changes it's first argument
     for i=1:100, j=1:100
         c[i,j] = a[i,j]+b[i,j]
@@ -77,8 +78,6 @@ end
 #5. Broadcasting (pointwise operations = "."wise operations)
 
 #5a Devectorized vs. Vectorized
-
-
 
 function applyf(x,fx)
   f(a) = a^3 + 4a^2 + 3a + 2
@@ -108,11 +107,11 @@ A .* B  # elementwise (A*B = matmul )
 # 1's are "wild carded"
 A = rand(1,4)
 B = rand(3,4)
-A .* B
+A .* B # Multiplying each row of B elementwise by the row A
 
 A = rand(3, 1)
 B = rand(1, 4)
-A .* B # outer product
+A .* B # outer product # or @. A + B
 A .+ B # outer sum 
 
 A = rand(2)  # one dimensional Vector (acts like size=2,1,1 here)
@@ -127,7 +126,7 @@ size( f.( rand(2) , rand(2,3,4),  rand(1,3) ) )
 A = [1 2 3;4 5 6;7 8 9]
 B = A # points to A
 B[1,1] = 18337
-A
+A # pointers are the same - both A and B pointing to same memory
 #MATLAB users get tripped by this one but valuable for performance
 
 A = [1 2 3;4 5 6;7 8 9]
@@ -140,6 +139,7 @@ B[1,1] = 18337
 A
 
 A = [1 2 3;4 5 6;7 8 9]
+# View allows you to grab pieces of a matrix to modify it w/o creating a new allocation / using up more memory
 B = @view A[1:2,1:2] # points into A
 B[1,1] = 18337
 A
@@ -149,7 +149,7 @@ A
 
 #7 Types, Type Inference, Multiple dispatch
 
-#7a Numbers are stored as bits
+#7a Numbers are stored as bits - 64 bits machine
 bitstring(0)
 bitstring(1)
 bitstring(1023)
@@ -191,7 +191,8 @@ a+b  # you may not know how to do this with the bits
 
 @code_llvm 2+5
 @code_llvm 2.0+5.0
-@code_llvm 2 + 5.0 # sitofp = llvm speak for "signed integer to floating point" conversion
+@code_llvm 2 + 5.0 # sitofp = llvm speak for "signed integer to floating point" (sitofp) conversion
+# or code_native
 
 #7c type stability
 # if you know the type of the input arguments, you know the type of the output
@@ -242,7 +243,7 @@ end
 import Base: promote_rule, convert, show
 Base.show(io::IO, r::Roman) = print(io,r.n%10==0 ? '0' : 'ⅰ'+r.n%10-1)
 
-[Roman(1) Roman(2) Roman(5) Roman(9) ]  #Exercise: make work past single digits
+[Roman(1) Roman(2) Roman(5) Roman(9)]  #Exercise: make work past single digits
 
 import Base.*
 *(i::Roman,j::Roman)  = Roman(i.n*j.n)                     # Multiply like a Roman
@@ -252,6 +253,8 @@ import Base.*
 Roman(2)*Roman(3)                      
 2 * Roman(3)
 Roman(2) * 3
+
+"Hello " * "class"
 
 # 7c code specialization
 # the code below is not type instable
