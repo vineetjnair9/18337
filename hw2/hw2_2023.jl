@@ -233,6 +233,10 @@ If anyone finds a really good workaround, please let me know.
 
 If all your imports of base and redefinitions are entirely in one cell
 I think then you won't have any problem in pluto.
+
+For those who want to delve into this, you can see issues [409]( https://github.com/fonsp/Pluto.jl/issues/409 ) and [177]( https://github.com/fonsp/Pluto.jl/issues/177 ), which basically says put it
+all in one cell, and they have the same gripe I have , that it ruins the flow
+of what is the great multiple dispatch story in Julia.
 ")
 
 # ╔═╡ 1478aba5-42d9-4f89-8b9e-4745c3f8602f
