@@ -42,6 +42,7 @@ Final Project reports due: May 15
 |-|-|
 |1| [HW1](https://mitmath.github.io/18337/hw1/hw1.html) |
 (For matrix calculus problems, do not use indices)
+|2| [HW2](https://mitmath.github.io/18337/hw2/hw2_2023.html)
 
 # Lecture Schedule (tentative) (Warning: links currently out of phase starting with lecture 5)
 |#|Day| Date |  Topic | [SciML](https://book.sciml.ai/) lecture | Materials |
