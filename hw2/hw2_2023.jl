@@ -82,7 +82,7 @@ begin
 end
 
 # ╔═╡ 9c384715-5bf5-4308-94ef-db4f26be45a4
-md"_Homework 2, version 1.1 -- 18.337 -- Spring  2023_"
+md"_Homework 2, version 1.2 -- 18.337 -- Spring  2023_"
 
 # ╔═╡ f8750fa4-8d49-4880-a53e-f40a653c84ea
 md"HW is to be submitted on Canvas in the form of a .jl file and .pdf file (use the browser print)"
@@ -102,7 +102,7 @@ given the holiday weekend (President's day) and all.
 # ╔═╡ bee4cd12-8ba4-4c43-b1d6-3e686f914e44
 md"## Exercise 1 - Comparing matrix multiplies
 
-1a. If an $m \times n$ matrix is multiplied by and $n \times k$  matrix, how many multiplies and adds are there approximately?
+> Task: 1a. If an $m \times n$ matrix is multiplied by and $n \times k$  matrix, how many multiplies and adds are there approximately?
 "
 
 # ╔═╡ 3f924a9c-c0f9-41e9-b96b-cc5f5de6cefa
@@ -112,10 +112,7 @@ Your answer to 1a goes here
 
 # ╔═╡ 008edb66-c860-4d14-ba43-16dedc80e141
 md"#
-1b. Write a test to compare matrix multiply  **rates** (units: ops/sec) for $n=50,100, 200, 400, 800$ and $1600$ by taking the number of operations and dividing by time. (You may
-find Pluto is not great for timing experiments, and it's okay to switch
-to Jupyter , vscode , or whatever you like, just provide your files)
-You can use the function below or make your own.  What kind of machine do you have, and estimate the asymptotic speed of a matmul on your machine?
+>Task: 1b.  Write a test to compare matrix multiply  **rates** (units: ops/sec) for $n=50,100, 200, 400, 800$ and $1600$ by taking the number of operations and dividing by time. (You may find Pluto is not great for timing experiments, and it's okay to switch to Jupyter , vscode , or whatever you like, just provide your files) You can use the function below or make your own.  What kind of machine do you have, and estimate the asymptotic speed of a matmul on your machine?
 "
 
 # ╔═╡ 711dd1dd-1e67-4e0d-9523-59c9ec5d9d61
@@ -124,10 +121,7 @@ Your answer to the questions about your machine and asymptotic speed can go here
 "
 
 # ╔═╡ 2d2922ec-d0d9-4d53-8103-2a072295e7d5
-md" 1c.  Compare timings for $A*B*C*D*v$ going left to right and right to left
-(by placing parentheses appropriately)
-as a function of $n$ , where $A,B,C,D$ are square matrices of size n,
-and $v$ is a vector size $n$. 
+md" >Task: 1c.  Compare timings for $A*B*C*D*v$ going left to right and right to left (by placing parentheses appropriately) as a function of $n$ , where $A,B,C,D$ are square matrices of size n, and $v$ is a vector of size $n$. 
 "
 
 # ╔═╡ 393f7223-9b1c-46fc-8aa5-96517f5739ae
@@ -138,8 +132,7 @@ Your code and timing go here
 # ╔═╡ 0da73ecd-5bda-4098-8f13-354af436d231
 md"## Exercise 2 - _Write a simple power method_
 
-
-First we will ask you to fill in the blank in a simple power iteration to obtain an approximation to the largest eigenvalue of a matrix. This code will be used in Exercise 3.
+>Task: First we will ask you to fill in the blank in a simple power iteration to obtain an approximation to the largest eigenvalue of a matrix. This code will be used in Exercise 3.
 "
 
 # ╔═╡ c442576f-b898-4a01-83a6-1d77ecd54836
@@ -181,9 +174,7 @@ A symmetric [arrow (or arrowhead)](https://en.wikipedia.org/wiki/Arrowhead_matri
 "
 
 # ╔═╡ 087bf886-0e02-45bc-b2c9-f9fcd6f3c0ee
-md"
-(3.1) Use Julia's sparse matrix capabilities to define a symmetric arrow matrix
-from its first row and diagonal: define vectors I and J containing the row (i) and column (j) coordinates of the non-zero entries, and a vector V of the corresponding values. Create the matrix with sparse(I, J, V). [Note: be careful not to define the upper left entry more than once.]
+md">Task:  (3.1) Use Julia's sparse matrix capabilities to define a symmetric arrow matrix from its first row and diagonal: define vectors I and J containing the row (i) and column (j) coordinates of the non-zero entries, and a vector V of the corresponding values. Create the matrix with sparse(I, J, V). [Note: be careful not to define the upper left entry more than once.]
 "
 
 # ╔═╡ 27e25ab8-6886-4c8a-b147-e194b2323274
@@ -195,7 +186,7 @@ You might play with some of the Julia syntax that follows
 
 # ╔═╡ bca4aca6-19d9-40b2-9cdf-c43a4305769a
 md"
-Fix a (largeish) arrow matrix that you will use throughout the question, and time how long the power method takes
+>Task: Fix a (largeish) arrow matrix that you will use throughout the question, and time how long the power method takes
 "
 
 # ╔═╡ 7bb9b046-8a9f-4b64-9740-3dd7da62a4b3
@@ -215,26 +206,54 @@ Let's remember how to make a new Julia \"type\" (a data structure):
 "
 
 # ╔═╡ b5cc38d7-996c-464d-b646-791b8e440bb0
+md">Task: Implement a new Julia type, SymArrowFloat  that contains two vectors of Float64: (This will only work for vectors of Float64, in 3.3 we will write the generic code)
+
+Inputs:
+1. the first row or column; and
+2. the diagonal entries.
+"
+
+
+# ╔═╡ 72bf7993-71d6-49a3-b10d-5e6bc056523b
 md"
+your code here for SymArrowFloat
+"
 
+# ╔═╡ 8f266bf4-8e8e-47ed-8f06-2be30bac3287
+danger(md"I am afraid the following may trigger a really annoying Pluto bug.
+I will find out if there is a workaround, but if not please do this and the
+following problem
+in Jupyter notebooks or vscode.  If you wish to use Jupyter instruction are
+[here](https://github.com/JuliaLang/IJulia.jl).  If you wish you use
+vscode instructions are [here](https://www.julia-vscode.org/).  The issue
+has to do with overwriting Base.
 
+I am truly terribly sorry that Pluto is so annoying because the underlying technology of being able to add types is really nice.  I have informed the author of Pluto.
+If anyone finds a really good workaround, please let me know.
 
-Implement a new Julia type, SymArrowFloat  that contains two vectors of Float64: 
-1. the diagonal entries; and
-2. the first row or column (minus the first entry).
+If all your imports of base and redefinitions are entirely in one cell
+I think then you won't have any problem in pluto.
+")
 
-Write the following functions acting on this type:
-
+# ╔═╡ 1478aba5-42d9-4f89-8b9e-4745c3f8602f
+md"
+>Task: Write the following functions acting on this type:
 `Matrix`, that creates a standard Julia matrix with the same contents
 + for adding two arrow matrices
 * for matrix-vector multiplication of a SymArrowFloat with a vector of Float64s
 show to display the matrix in a clear way.
 
+
+
 (Import Base.show and then define show(io::IO, A::SymArrowFloat).)
 
 Write tests to make sure that * works 
 
-Find the largest eigenvalue of a symmetric arrow matrix using the power_method code, and check that it is correct.
+Find the largest eigenvalue of a symmetric arrow matrix using the power_method code, and check that it is correct using ≈ .
+"
+
+# ╔═╡ 10ebbd90-298c-4d2c-8a1b-3cf502f14cd4
+md">Task: Find the largest eigenvalue of a symmetric arrow matrix using the power_method code, and check that it is correct using ≈ .
 "
 
 # ╔═╡ 4559691d-b93c-4d66-984f-0560ad458008
@@ -248,7 +267,7 @@ To make a new type SymArrow that can contain elements of an arbitrary type T, su
 md"
 Here, T is a type parameter: we are defining a template for a new type that will contain elements of type T.
 
-Redefine Matrix, + and *. These must also have type parameters, for example the signature of the + method will be
+>Task: Redefine Matrix, + and *. These must also have type parameters, for example the signature of the + method will be
 
 +{T}(A::SymArrow{T}, B::SymArrow{T}) = ⋯
 "
@@ -267,8 +286,11 @@ For a detailed discussion of parametric types, see the [Julia manual](https://do
 # ╔═╡ d75b96c9-7435-4fc7-b905-b036e20851af
 md"
 This will allow us to use many so-called fall-back methods that Julia provides, defined for types that to automatically obtain functionality, without explicitly providing it ourselves, as we had to in question (ii). However, this may lead to less efficient code, since the generic versions will not take advantage of the structure.
+"
 
-First, try defining a SymArrow2. What does the error message say? We see that in order to use the Julia-provided functionality, we must first define two methods for objects A of type SymArrow2:
+
+# ╔═╡ e4687b24-add7-4a96-b12e-aef540327c81
+md">Task: First, try defining a SymArrow2. What does the error message say? We see that in order to use the Julia-provided functionality, we must first define two methods for objects A of type SymArrow2:
 "
 
 # ╔═╡ 62d9f2ad-638e-4444-ba08-7f2d02331e37
@@ -279,12 +301,11 @@ getindex(A, i, j), which defines what is returned when we query A[i, j], i.e. ac
 "
 
 # ╔═╡ d67d3fbb-0f44-4c26-ae80-aa7b6343e6d9
-md"
-This is done as follows; fill in the details for getindex:
+md">Task: This is done as follows; fill in the details for getindex:
 	"
 
 # ╔═╡ 7a36f9e1-51cb-44b7-8c54-630d8762fd11
-md"Now check that Matrix and * work automatically for this type, having defined only size and getindex.
+md">Task: Now check that Matrix and * work automatically for this type, having defined only size and getindex.
 
 Time the power method for each version of the type. Which is fastest? Explain the trade-off between generic programming and execution speed.
 "
@@ -293,11 +314,16 @@ Time the power method for each version of the type. Which is fastest? Explain th
 md" ## Exercise 4 _Hello World on a GPU_
 
 Follow the steps outlined in [this document](https://docs.google.com/document/d/146_lPEcIq6WODdw8oPUVs6Bflp5ptjL6t0YQ6zuyG44/edit?usp=sharing) to log in to JuliaHub and connect to a GPU Pluto notebook.
-Use this notebook URL: <https://raw.githubusercontent.com/mitmath/JuliaComputation/main/homeworks/hw5-gpu.jl>
+copy and paste this notebook URL: https://raw.githubusercontent.com/mitmath/JuliaComputation/main/homeworks/hw5-gpu.jl
 
 Run the JuliaHub notebook and answer the following questions **here**.
 You do not need to submit the JuliaHub notebook, only this one.
 "
+
+# ╔═╡ e21b0308-c86f-4343-8bd5-bfa805f80c25
+danger(md"Under no circumstances will you be charged. Do not be afraid of
+any costs that appear.
+")
 
 # ╔═╡ 07bfc3d8-288e-4ace-ad3b-574e7ace4a14
 md"""
@@ -701,7 +727,7 @@ version = "17.4.0+0"
 # ╟─bec48cfd-ac3b-4dae-973f-cf529b3cdc05
 # ╟─bee4cd12-8ba4-4c43-b1d6-3e686f914e44
 # ╠═3f924a9c-c0f9-41e9-b96b-cc5f5de6cefa
-# ╠═008edb66-c860-4d14-ba43-16dedc80e141
+# ╟─008edb66-c860-4d14-ba43-16dedc80e141
 # ╠═a9b81d9b-9243-428d-87e5-77db83afb00b
 # ╠═e5a1396f-03da-442d-a968-259effe56c84
 # ╠═711dd1dd-1e67-4e0d-9523-59c9ec5d9d61
@@ -712,7 +738,7 @@ version = "17.4.0+0"
 # ╠═c442576f-b898-4a01-83a6-1d77ecd54836
 # ╟─bad69026-2dcc-4370-9cb1-c90953398f59
 # ╟─172bd4bd-5ea9-475f-843d-abb86ffaed34
-# ╠═087bf886-0e02-45bc-b2c9-f9fcd6f3c0ee
+# ╟─087bf886-0e02-45bc-b2c9-f9fcd6f3c0ee
 # ╠═27e25ab8-6886-4c8a-b147-e194b2323274
 # ╠═64e7f4c8-1f4b-4e57-aed0-c9d373897c47
 # ╠═981a4406-8d82-448c-8bbc-753a0409ad29
@@ -726,7 +752,11 @@ version = "17.4.0+0"
 # ╟─d80f43d8-ecf2-4d06-9d00-5de7811526e7
 # ╠═0ca2494e-0eca-4d4a-8726-080c95c868a5
 # ╠═b224fbc0-d2f9-4519-bcc6-ee2678fd5fe7
-# ╠═b5cc38d7-996c-464d-b646-791b8e440bb0
+# ╟─b5cc38d7-996c-464d-b646-791b8e440bb0
+# ╠═72bf7993-71d6-49a3-b10d-5e6bc056523b
+# ╟─8f266bf4-8e8e-47ed-8f06-2be30bac3287
+# ╟─1478aba5-42d9-4f89-8b9e-4745c3f8602f
+# ╟─10ebbd90-298c-4d2c-8a1b-3cf502f14cd4
 # ╟─4559691d-b93c-4d66-984f-0560ad458008
 # ╠═4c344a55-92e8-4577-81ae-87210c3cd1c0
 # ╟─f42dc4ef-8af1-4c4b-a069-94b4460078cc
@@ -734,12 +764,14 @@ version = "17.4.0+0"
 # ╠═fcf046f5-4d83-4869-a156-4dbcd113e694
 # ╟─a7724b60-0c8a-4f83-bcfa-c5be4ea085eb
 # ╟─d75b96c9-7435-4fc7-b905-b036e20851af
+# ╟─e4687b24-add7-4a96-b12e-aef540327c81
 # ╟─62d9f2ad-638e-4444-ba08-7f2d02331e37
 # ╟─d67d3fbb-0f44-4c26-ae80-aa7b6343e6d9
 # ╠═5af359e0-791d-49bf-b655-0a45db48c00f
-# ╟─7a36f9e1-51cb-44b7-8c54-630d8762fd11
+# ╠═7a36f9e1-51cb-44b7-8c54-630d8762fd11
 # ╟─ebd42c0b-01a6-4257-a05b-f722cc78de99
-# ╠═07bfc3d8-288e-4ace-ad3b-574e7ace4a14
+# ╟─e21b0308-c86f-4343-8bd5-bfa805f80c25
+# ╟─07bfc3d8-288e-4ace-ad3b-574e7ace4a14
 # ╟─5bdb8764-cd7c-4300-aa1e-c8f5dc297832
 # ╟─f3f7144a-3137-4e5d-8289-35514728cf88
 # ╟─76b57b6c-9af6-455a-897b-59dd311e8b01
