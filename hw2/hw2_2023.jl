@@ -220,8 +220,11 @@ your code here for SymArrowFloat
 "
 
 # ╔═╡ 8f266bf4-8e8e-47ed-8f06-2be30bac3287
-danger(md"I am afraid the following may trigger a really annoying Pluto bug.
-I will find out if there is a workaround, but if not please do this and the
+danger(md"I am afraid the following may trigger a really annoying Pluto bug,
+but you'll need all your imports of base and redefinitions to be entirely in one cell.
+
+I will find out if there is a workaround, but if
+you don't want to put it all in one cell, please do this and the
 following problem
 in Jupyter notebooks or vscode.  If you wish to use Jupyter instruction are
 [here](https://github.com/JuliaLang/IJulia.jl).  If you wish you use
@@ -231,8 +234,7 @@ has to do with overwriting Base.
 I am truly terribly sorry that Pluto is so annoying because the underlying technology of being able to add types is really nice.  I have informed the author of Pluto.
 If anyone finds a really good workaround, please let me know.
 
-If all your imports of base and redefinitions are entirely in one cell
-I think then you won't have any problem in pluto.
+
 
 For those who want to delve into this, you can see issues [409]( https://github.com/fonsp/Pluto.jl/issues/409 ) and [177]( https://github.com/fonsp/Pluto.jl/issues/177 ), which basically says put it
 all in one cell, and they have the same gripe I have , that it ruins the flow
