@@ -50,7 +50,9 @@ end
 newtype( rand(), rand(1:10,4))
 
 # ╔═╡ 9dc966c9-26be-45c6-ad70-9301d834b992
-
+# complete the line below
+# Matrix(M::SymArrowFloat) = .....
+Base.Matrix(M::Int) = 7
 
 # ╔═╡ 69786b36-9ba4-4dc9-825b-43437bd69197
 # Modify the line below
@@ -86,7 +88,7 @@ end
 # ╔═╡ fcf046f5-4d83-4869-a156-4dbcd113e694
 struct SymArrow2{T} <: AbstractMatrix{T}
     diag::Vector{T}
-    first_row::Vector{T}  # without first entry
+    first_row::Vector{T}  
 end
 
 # ╔═╡ 5af359e0-791d-49bf-b655-0a45db48c00f
@@ -97,9 +99,9 @@ begin
 	
 	function getindex(A::SymArrow2{T}, i, j) where T
 	    
-	    i == j  ## fill this case in
-	    i == 1  ## fill this case in
-	    j == 1  ## fill this case in
+	    if i == j  return A.diag[i] end 
+	    if i == 1  return A.first_row[i] end
+	    if j == 1  return A.first_row[j] end
 	
 	    return zero(T)  # otherwise return zero of type T
 	end
