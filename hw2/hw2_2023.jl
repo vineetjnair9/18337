@@ -13,12 +13,8 @@ using LinearAlgebra, BenchmarkTools, SparseArrays, PlutoTeachingTools
 student = (name = "Philip the Corgi", kerberos_id = "ptcorgi")
 
 
-# ╔═╡ a9b81d9b-9243-428d-87e5-77db83afb00b
-function time_matmul(n)
-	A = rand(n,n)
-	B = rand(n,n)	
-	(2n^3)/ @belapsed $A*$B  # operations divided by time in seconds
-end
+# ╔═╡ 61ab7fb5-8a31-4ad3-96ca-62584843a1a6
+Base:.+(a::String,b::String)=a
 
 # ╔═╡ e5a1396f-03da-442d-a968-259effe56c84
 
@@ -52,6 +48,34 @@ end
 
 # ╔═╡ b224fbc0-d2f9-4519-bcc6-ee2678fd5fe7
 newtype( rand(), rand(1:10,4))
+
+# ╔═╡ 9dc966c9-26be-45c6-ad70-9301d834b992
+
+
+# ╔═╡ 69786b36-9ba4-4dc9-825b-43437bd69197
+# Modify the line below
+Base.:*(s::String,t::Int) = `🤡`   # change the arguments and the rhs
+
+# ╔═╡ a9b81d9b-9243-428d-87e5-77db83afb00b
+function time_matmul(n)
+	A = rand(n,n)
+	B = rand(n,n)	
+	(2n^3)/ @belapsed $A*$B  # operations divided by time in seconds
+end
+
+# ╔═╡ f5012c40-2f20-47a9-b7dd-5cc157bf4697
+# modify the line below
+Base.:+(s::String,t::String) = s*t
+
+# ╔═╡ 8f266bf4-8e8e-47ed-8f06-2be30bac3287
+# modify the line below
+Base.show(io::IO, A::Matrix) = `🗿` # change the argument and the rhs
+
+# ╔═╡ 7bc4841a-d88f-4e8d-9bdd-08fc288590a2
+
+
+# ╔═╡ 287fa3e2-21e4-4f77-ae5a-0c71dc8e5839
+
 
 # ╔═╡ 4c344a55-92e8-4577-81ae-87210c3cd1c0
 struct SymArrow{T}
@@ -179,7 +203,8 @@ md">Task:  (3.1) Use Julia's sparse matrix capabilities to define a symmetric ar
 
 # ╔═╡ 27e25ab8-6886-4c8a-b147-e194b2323274
 md"
-Write your function here that takes vectors r and d in and returns the sym arrow matrix out.  (You can have r and d of length n, but use r[1] and not d[1]).
+Write your function here that takes vectors r and d in and returns the sym arrow matrix out.  (You can have r and d of length n, but you will only use 
+one of r[1] and d[1])
 
 You might play with some of the Julia syntax that follows
 "
@@ -219,34 +244,14 @@ md"
 your code here for SymArrowFloat
 "
 
-# ╔═╡ 8f266bf4-8e8e-47ed-8f06-2be30bac3287
-danger(md"I am afraid the following may trigger a really annoying Pluto bug,
-but you'll need all your imports of base and redefinitions to be entirely in one cell.
-
-I will find out if there is a workaround, but if
-you don't want to put it all in one cell, please do this and the
-following problem
-in Jupyter notebooks or vscode.  If you wish to use Jupyter instruction are
-[here](https://github.com/JuliaLang/IJulia.jl).  If you wish you use
-vscode instructions are [here](https://www.julia-vscode.org/).  The issue
-has to do with overwriting Base.
-
-I am truly terribly sorry that Pluto is so annoying because the underlying technology of being able to add types is really nice.  I have informed the author of Pluto.
-If anyone finds a really good workaround, please let me know.
-
-
-
-For those who want to delve into this, you can see issues [409]( https://github.com/fonsp/Pluto.jl/issues/409 ) and [177]( https://github.com/fonsp/Pluto.jl/issues/177 ), which basically says put it
-all in one cell, and they have the same gripe I have , that it ruins the flow
-of what is the great multiple dispatch story in Julia.
-")
-
 # ╔═╡ 1478aba5-42d9-4f89-8b9e-4745c3f8602f
 md"
 >Task: Write the following functions acting on this type:
 `Matrix`, that creates a standard Julia matrix with the same contents
-+ for adding two arrow matrices
-* for matrix-vector multiplication of a SymArrowFloat with a vector of Float64s
+
+`+` for adding two arrow matrices
+
+`*` for matrix-vector multiplication of a SymArrowFloat with a vector of Float64s
 show to display the matrix in a clear way.
 
 
@@ -730,6 +735,7 @@ version = "17.4.0+0"
 # ╠═9c384715-5bf5-4308-94ef-db4f26be45a4
 # ╠═7679b2c5-a644-4341-a7cc-d1335727aacd
 # ╟─f8750fa4-8d49-4880-a53e-f40a653c84ea
+# ╠═61ab7fb5-8a31-4ad3-96ca-62584843a1a6
 # ╟─bec48cfd-ac3b-4dae-973f-cf529b3cdc05
 # ╟─bee4cd12-8ba4-4c43-b1d6-3e686f914e44
 # ╠═3f924a9c-c0f9-41e9-b96b-cc5f5de6cefa
@@ -745,7 +751,7 @@ version = "17.4.0+0"
 # ╟─bad69026-2dcc-4370-9cb1-c90953398f59
 # ╟─172bd4bd-5ea9-475f-843d-abb86ffaed34
 # ╟─087bf886-0e02-45bc-b2c9-f9fcd6f3c0ee
-# ╠═27e25ab8-6886-4c8a-b147-e194b2323274
+# ╟─27e25ab8-6886-4c8a-b147-e194b2323274
 # ╠═64e7f4c8-1f4b-4e57-aed0-c9d373897c47
 # ╠═981a4406-8d82-448c-8bbc-753a0409ad29
 # ╠═0cb96697-14be-432e-9ee6-87298f560c6b
@@ -760,9 +766,14 @@ version = "17.4.0+0"
 # ╠═b224fbc0-d2f9-4519-bcc6-ee2678fd5fe7
 # ╟─b5cc38d7-996c-464d-b646-791b8e440bb0
 # ╠═72bf7993-71d6-49a3-b10d-5e6bc056523b
-# ╟─8f266bf4-8e8e-47ed-8f06-2be30bac3287
-# ╟─1478aba5-42d9-4f89-8b9e-4745c3f8602f
+# ╠═1478aba5-42d9-4f89-8b9e-4745c3f8602f
+# ╠═9dc966c9-26be-45c6-ad70-9301d834b992
+# ╠═f5012c40-2f20-47a9-b7dd-5cc157bf4697
+# ╠═69786b36-9ba4-4dc9-825b-43437bd69197
+# ╠═8f266bf4-8e8e-47ed-8f06-2be30bac3287
+# ╠═7bc4841a-d88f-4e8d-9bdd-08fc288590a2
 # ╟─10ebbd90-298c-4d2c-8a1b-3cf502f14cd4
+# ╠═287fa3e2-21e4-4f77-ae5a-0c71dc8e5839
 # ╟─4559691d-b93c-4d66-984f-0560ad458008
 # ╠═4c344a55-92e8-4577-81ae-87210c3cd1c0
 # ╟─f42dc4ef-8af1-4c4b-a069-94b4460078cc
@@ -774,7 +785,7 @@ version = "17.4.0+0"
 # ╟─62d9f2ad-638e-4444-ba08-7f2d02331e37
 # ╟─d67d3fbb-0f44-4c26-ae80-aa7b6343e6d9
 # ╠═5af359e0-791d-49bf-b655-0a45db48c00f
-# ╠═7a36f9e1-51cb-44b7-8c54-630d8762fd11
+# ╟─7a36f9e1-51cb-44b7-8c54-630d8762fd11
 # ╟─ebd42c0b-01a6-4257-a05b-f722cc78de99
 # ╟─e21b0308-c86f-4343-8bd5-bfa805f80c25
 # ╟─07bfc3d8-288e-4ace-ad3b-574e7ace4a14
