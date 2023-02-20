@@ -37,6 +37,8 @@ Final Project presentations : April 26 to May 15
 
 Final Project reports due: May 15
 
+# Grading: 50% problem sets, 10% for the final project proposal, and 40% for the final project. Problem sets and final projects will be submitted electronically.
+
 # HW
 |#| Notebook|
 |-|-|
