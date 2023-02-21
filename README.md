@@ -86,6 +86,7 @@ Final Project reports due: May 15
 
 [1]:https://book.sciml.ai/notes/01/
 [2]:https://book.sciml.ai/notes/02-Optimizing_Serial_Code/
+[3]:https://book.sciml.ai/notes/03-Introduction_to_Scientific_Machine_Learning_through_Physics-Informed_Neural_Networks/
 [4]:https://book.sciml.ai/notes/04/
 [5]:https://book.sciml.ai/notes/05/
 [6]:https://book.sciml.ai/notes/06/
