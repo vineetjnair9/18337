@@ -41,7 +41,7 @@ composed_loss() = loss() + λ*loss_ode()
 
 
 opt = Flux.Descent(0.01)
-data = Iterators.repeated((), 5000)
+data = Iterators.repeated((), 10000)
 iter = 0
 cb = function () #callback function to observe training
   global iter += 1
