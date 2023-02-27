@@ -56,12 +56,13 @@ Final Project reports due: May 15
 |4|W|2/15| Serial Performance | [2][2] |[[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture4/lecture_4_handwritten_2023.pdf), [[Serial Performance .jl file]](https://github.com/mitmath/18337/blob/master/lecture4/serial%20performance.jl), [[Loop Fusion Blog ]](https://julialang.org/blog/2017/01/moredots/)
 |5|T|2/21| Intro to PINNs and Automatic differentiation I : Forward mode AD | [3][3] and [8][8] | [ode and Pinns](https://mit-18337-spring2023.netlify.app/lecture5/ode_simple.html),[intro to pinn handwritten notes](https://github.com/mitmath/18337/blob/master/lecture5/1071_230222012837_001.pdf),[autodiff handwritten notes](https://github.com/mitmath/JuliaComputation/blob/ec6861bc9396d2b577f1bbc8136683d4298d7dc8/slides/ad_handwritten.pdf)
 |6|W|2/22| Automatic differentiation II : Reverse mode AD |[10][10]|  [pinn.jl](https://github.com/mitmath/18337/blob/master/lecture5/pinn.jl), [reverse mode ad demo](https://simeonschaub.github.io/ReverseModePluto/notebook.html),[handwritten notes](https://github.com/mitmath/18337/blob/master/lecture6/handwritten%20reverse%20mode.pdf)|
+|7|M|2/27| Multithreading, Static and Dynamic Scheduling  | | [Slides](https://github.com/mitmath/18337/blob/master/lecture%207/siampp2022.pdf)
 <!--
 |4|W|2/15| Automatic differentiation I : Forward mode AD |[8][8] |   [[video 1]](https://youtu.be/C3vf9ZFYbjI)      [[video2]](https://youtu.be/hKHl68Fdpq4) 
 -->
 
 |6|W|2/22| Models of Parallelism |[6][6]|  [[video]](https://www.youtube.com/watch?v=EP5VWwPIews)
-|7|M|2/27| Multithreading, Static and Dynamic Scheduling  | | [Slides](https://github.com/mitmath/18337/blob/master/lecture%207/siampp2022.pdf)
+
 |8|W|3/1| GPU Parallelism I |[7][7]| [[video 1]](https://www.youtube.com/watch?v=riAbPZy9gFc),[[video2]](https://www.youtube.com/watch?v=HMmOk9GIhsw)
 |9|M|3/6| GPU Paralellism II | | [[video]](https://www.youtube.com/watch?v=zHPXGBiTM5A), [[Eig&SVD derivatives notebooks]](https://github.com/mitmath/18337/tree/master/lecture9), [[2022 IAP Class Matrix Calculus]](https://github.com/mitmath/matrixcalc)
 |10|W|3/8| MPI |  |  [Slides](https://github.com/SciML/SciMLBook/blob/spring21/lecture12/MPI.jl.pdf),  [[video, Lauren Milichen]](https://www.youtube.com/watch?v=LCIJj0czofo),[[Performance Metrics]](https://github.com/mitmath/18337/blob/spring21/lecture12/PerformanceMetricsSoftwareArchitecture.pdf) see p317,15.6
