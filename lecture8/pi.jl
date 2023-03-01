@@ -54,14 +54,35 @@ function estimate_pi_tasks_channel(N::Int)
 end
 
 
+mutable struct Counter{T}
+	@atomic val::T
+end
+
+"""
+function estimatepi(n)
+
+Runs a simple Monte Carlo method
+to estimate pi with n samples.
+"""
+function estimate_pi_atomic(n)
+	count = Counter(0)
+	Threads.@threads for i=1:n
+		x = rand(Uniform(-1.0, 1.0))
+		y = rand(Uniform(-1.0, 1.0))
+		@atomic count.val += (x^2 + y^2) <= 1
+	end
+	return 4*count.val/n
+end
 
 
-N = 2000
-#estimate_pi_tasks(N)
 
- #serial = @elapsed estimate_pi(N)
+N = 200000
+
+
+serial = @elapsed estimate_pi(N)
 pchannel = @elapsed estimate_pi_tasks_channel(N)
 pvector = @elapsed estimate_pi_tasks_vector(N)
+patomic = @elapsed estimate_pi_atomic(N)
 
-pchannel,pvector
-pvector/serial, pchannel/serial
+
+pvector/serial, pchannel/serial, patomic/serial
