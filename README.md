@@ -56,7 +56,7 @@ Final Project reports due: May 15
 |4|W|2/15| Serial Performance | [2][2] |[[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture4/lecture_4_handwritten_2023.pdf), [[Serial Performance .jl file]](https://github.com/mitmath/18337/blob/master/lecture4/serial%20performance.jl), [[Loop Fusion Blog ]](https://julialang.org/blog/2017/01/moredots/)
 |5|T|2/21| Intro to PINNs and Automatic differentiation I : Forward mode AD | [3][3] and [8][8] | [ode and Pinns](https://mit-18337-spring2023.netlify.app/lecture5/ode_simple.html),[intro to pinn handwritten notes](https://github.com/mitmath/18337/blob/master/lecture5/1071_230222012837_001.pdf),[autodiff handwritten notes](https://github.com/mitmath/JuliaComputation/blob/ec6861bc9396d2b577f1bbc8136683d4298d7dc8/slides/ad_handwritten.pdf)
 |6|W|2/22| Automatic differentiation II : Reverse mode AD |[10][10]|  [pinn.jl](https://github.com/mitmath/18337/blob/master/lecture5/pinn.jl), [reverse mode ad demo](https://simeonschaub.github.io/ReverseModePluto/notebook.html),[handwritten notes](https://github.com/mitmath/18337/blob/master/lecture6/handwritten%20reverse%20mode.pdf)|
-|7|M|2/27| Multithreading, Static and Dynamic Scheduling  | | [Slides](https://github.com/mitmath/18337/blob/master/lecture%207/siampp2022.pdf)
+|7|M|2/27 |  Dynamical Systems & Serial Performance on Iterations |  [4][4] | [Lorenz many ways](https://github.com/mitmath/18337/blob/master/lecture7/LorenzManyWays.jl), [Dynamical Systems](https://mitmath.github.io/18337/lecture7/dynamics.html) |
 <!--
 |4|W|2/15| Automatic differentiation I : Forward mode AD |[8][8] |   [[video 1]](https://youtu.be/C3vf9ZFYbjI)      [[video2]](https://youtu.be/hKHl68Fdpq4) 
 -->
@@ -89,8 +89,7 @@ Final Project reports due: May 15
 [1]:https://book.sciml.ai/notes/01/
 [2]:https://book.sciml.ai/notes/02-Optimizing_Serial_Code/
 [3]:https://book.sciml.ai/notes/03-Introduction_to_Scientific_Machine_Learning_through_Physics-Informed_Neural_Networks/
-[3]:
-[4]:https://book.sciml.ai/notes/04/
+[4]:https://book.sciml.ai/notes/04-How_Loops_Work-An_Introduction_to_Discrete_Dynamics/
 [5]:https://book.sciml.ai/notes/05/
 [6]:https://book.sciml.ai/notes/06/
 [7]:https://book.sciml.ai/notes/07/
