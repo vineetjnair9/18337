@@ -74,6 +74,18 @@ function estimate_pi_atomic(n)
 	return 4*count.val/n
 end
 
+function estimate_pi_tasks_atomic(N::Int)
+	ntasks = Base.Threads.nthreads()
+	#slices_of_pi = Vector{Float64}(undef, ntasks)
+	n = N ÷ ntasks
+	sum = Counter(0.0)
+	@sync for tid in 1:ntasks
+		Threads.@spawn begin
+			@atomic sum.val += estimate_pi(n)
+		end
+	end
+    return sum.val / ntasks
+end
 
 
 N = 200000
@@ -83,6 +95,7 @@ serial = @elapsed estimate_pi(N)
 pchannel = @elapsed estimate_pi_tasks_channel(N)
 pvector = @elapsed estimate_pi_tasks_vector(N)
 patomic = @elapsed estimate_pi_atomic(N)
+ptasksatomic = @elapsed estimate_pi_tasks_atomic
 
 
-pvector/serial, pchannel/serial, patomic/serial
+pvector/serial, pchannel/serial, patomic/serial, ptasksatomic/serial
