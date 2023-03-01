@@ -139,6 +139,8 @@ Last three weeks (tentative)  will be student presentations.
 
 ## Possible Project Topics
 
+Here's a list of [current projects](https://github.com/JuliaLabs/julialabs.github.io/blob/master/projects.md) of interest to the julialab
+
 One possibility is to review an interesting algorithm not covered in the course
 and develop a high performance implementation. Some examples include:
 
