@@ -1,8 +1,3 @@
-# tracywidomlis.jl
-#Experiment:  Sample random permutations
-#Plot:
-#Theory:
-
 using Plots, Random, SpecialFunctions, FastGaussQuadrature, LinearAlgebra, ForwardDiff
 
 airy_kernel(x, y) = x==y ? (airyaiprime(x))^2 - x * (airyai(x))^2 :
@@ -17,9 +12,6 @@ function K(s , n=100)
 end
 
 TracyWidomPDF_via_Fredholm_Det(s) = ForwardDiff.derivative( t->det(I-K(t)),s)
-
-
-
 
 t = 300 # change to 10_000 slowly when ready
 
