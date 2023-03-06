@@ -2,7 +2,9 @@ using Flux, Plots, DifferentialEquations
 
 # Let's set up a modified Hook's law u" = kx + 0.1sinx
 k = 1.0
-force(dx,x,k,t) = -k*x + 0.1sin(x)
+force(dx,x,k,t) = -k*x + 0.1sin(x)  # suppose there was friction, then we would use dx (velocity)
+
+
 
 # solve and plot the solution
 prob = SecondOrderODEProblem(force,1.0,0.0,(0.0,10.0),k)
@@ -36,11 +38,14 @@ loss_ode() = sum(abs2,NNForce(x) - (-k*x) for x in random_positions)
 loss() = sum(abs2,NNForce(position_data[i]) - force_data[i] for i in 1:length(position_data))
 
 λ = 0.1
+# penalizes for being off on the guess but also off on the data
+# a compromise between knowledge (presumed approximate) and observation (perhaps also approximate)
 composed_loss() = loss() + λ*loss_ode()
 
 
 
-opt = Flux.Descent(0.01)
+#opt = Flux.Descent(0.01)
+opt = Flux.Adam(0.01)
 data = Iterators.repeated((), 10000)
 iter = 0
 cb = function () #callback function to observe training

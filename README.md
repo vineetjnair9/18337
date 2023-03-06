@@ -28,7 +28,7 @@ If possible, try to install Julia on your laptop beforehand using the instructio
 
 ## Announcement:
  
-There will be a small number of homeworks, followed by the final project. 
+There will be  homeworks, followed by the final project. 
 Everyone needs to present their work and submit a project report. 
 
 1-page Final Project proposal due : March 24 
@@ -45,7 +45,8 @@ Final Project reports due: May 15
 |-|-|
 |1| [HW1](https://mitmath.github.io/18337/hw1/hw1.html) |
 (For matrix calculus problems, do not use indices)
-|2| [HW2](https://mitmath.github.io/18337/hw2/hw2_2023.html)
+|2| [HW2](https://mitmath.github.io/18337/hw2/hw2_2023.html) Due Wednesday March 1, 2023
+|3| [HW3](https://github.com/mitmath/18337/blob/master/hw3/18_337_2023_pset3.pdf ) | Due Wednesday March 15, 2023
 
 # Lecture Schedule (tentative) (Warning: links currently out of phase starting with lecture 7)
 |#|Day| Date |  Topic | [SciML](https://book.sciml.ai/) lecture | Materials |
@@ -55,13 +56,15 @@ Final Project reports due: May 15
 |3|M|2/13| Matrix Calculus II || [[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture3/lecture_3_handwritten_2023.pdf),[[Corgi in the Washing Machine]](https://mit-c25.netlify.app/notebooks/1_hyperbolic_corgi),[[2x2 Matrix Jacobians]](https://rawcdn.githack.com/mitmath/matrixcalc/3f6758996e40c5c1070279f89f7f65e76e08003d/notes/2x2Jacobians.jl.html)
 |4|W|2/15| Serial Performance | [2][2] |[[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture4/lecture_4_handwritten_2023.pdf), [[Serial Performance .jl file]](https://github.com/mitmath/18337/blob/master/lecture4/serial%20performance.jl), [[Loop Fusion Blog ]](https://julialang.org/blog/2017/01/moredots/)
 |5|T|2/21| Intro to PINNs and Automatic differentiation I : Forward mode AD | [3][3] and [8][8] | [ode and Pinns](https://mit-18337-spring2023.netlify.app/lecture5/ode_simple.html),[intro to pinn handwritten notes](https://github.com/mitmath/18337/blob/master/lecture5/1071_230222012837_001.pdf),[autodiff handwritten notes](https://github.com/mitmath/JuliaComputation/blob/ec6861bc9396d2b577f1bbc8136683d4298d7dc8/slides/ad_handwritten.pdf)
-|6|W|2/22| Automatic differentiation II : Reverse mode AD |[10][10]|  [pinn.jl](https://github.com/mitmath/18337/blob/master/lecture5/pinn.jl), [reverse mode ad demo](https://simeonschaub.github.io/ReverseModePluto/notebook.html),[handwritten notes](https://github.com/mitmath/18337/blob/master/lecture6/handwritten%20reverse%20mode.pdf)|
+|6|W|2/22| Automatic differentiation II : Reverse mode AD |[10][10]|  [pinn.jl](https://github.com/mitmath/18337/blob/master/lecture5/pinn.jl), [reverse mode ad demo](https://simeonschaub.github.io/ReverseModePluto/notebook.html),[handwritten notes](https://github.com/mitmath/18337/blob/master/lecture6/ handwritten%20reverse%20mode.pdf)|
+|7|M|2/27 |  Dynamical Systems & Serial Performance on Iterations |  [4][4] | [Lorenz many ways](https://github.com/mitmath/18337/blob/master/lecture7/LorenzManyWays.jl), [Dynamical Systems](https://mitmath.github.io/18337/lecture7/dynamics.html), [handwriten notes](https://github.com/mitmath/18337/blob/master/lecture7/lecture7%20handwritten%20notes.pdf) |
+|8|W|3/1|  Threading | [5][5] and [6][6] |    (TBA) |
 <!--
 |4|W|2/15| Automatic differentiation I : Forward mode AD |[8][8] |   [[video 1]](https://youtu.be/C3vf9ZFYbjI)      [[video2]](https://youtu.be/hKHl68Fdpq4) 
 -->
 
-|6|W|2/22| Models of Parallelism |[6][6]|  [[video]](https://www.youtube.com/watch?v=EP5VWwPIews)
-|7|M|2/27| Multithreading, Static and Dynamic Scheduling  | | [Slides](https://github.com/mitmath/18337/blob/master/lecture%207/siampp2022.pdf)
+
+
 |8|W|3/1| GPU Parallelism I |[7][7]| [[video 1]](https://www.youtube.com/watch?v=riAbPZy9gFc),[[video2]](https://www.youtube.com/watch?v=HMmOk9GIhsw)
 |9|M|3/6| GPU Paralellism II | | [[video]](https://www.youtube.com/watch?v=zHPXGBiTM5A), [[Eig&SVD derivatives notebooks]](https://github.com/mitmath/18337/tree/master/lecture9), [[2022 IAP Class Matrix Calculus]](https://github.com/mitmath/matrixcalc)
 |10|W|3/8| MPI |  |  [Slides](https://github.com/SciML/SciMLBook/blob/spring21/lecture12/MPI.jl.pdf),  [[video, Lauren Milichen]](https://www.youtube.com/watch?v=LCIJj0czofo),[[Performance Metrics]](https://github.com/mitmath/18337/blob/spring21/lecture12/PerformanceMetricsSoftwareArchitecture.pdf) see p317,15.6
@@ -88,10 +91,9 @@ Final Project reports due: May 15
 [1]:https://book.sciml.ai/notes/01/
 [2]:https://book.sciml.ai/notes/02-Optimizing_Serial_Code/
 [3]:https://book.sciml.ai/notes/03-Introduction_to_Scientific_Machine_Learning_through_Physics-Informed_Neural_Networks/
-[3]:
-[4]:https://book.sciml.ai/notes/04/
-[5]:https://book.sciml.ai/notes/05/
-[6]:https://book.sciml.ai/notes/06/
+[4]:https://book.sciml.ai/notes/04-How_Loops_Work-An_Introduction_to_Discrete_Dynamics/
+[5]:https://book.sciml.ai/notes/05-The_Basics_of_Single_Node_Parallel_Computing/
+[6]:https://book.sciml.ai/notes/06-The_Different_Flavors_of_Parallelism/
 [7]:https://book.sciml.ai/notes/07/
 [8]:https://book.sciml.ai/notes/08-Forward-Mode_Automatic_Differentiation_(AD)_via_High_Dimensional_Algebras/
 [9]:https://book.sciml.ai/notes/09/
@@ -137,6 +139,8 @@ proposal must be sumbitted by March 24 Friday, through canvas.
 Last three weeks (tentative)  will be student presentations. 
 
 ## Possible Project Topics
+
+Here's a list of [current projects](https://github.com/JuliaLabs/julialabs.github.io/blob/master/projects.md) of interest to the julialab
 
 One possibility is to review an interesting algorithm not covered in the course
 and develop a high performance implementation. Some examples include:

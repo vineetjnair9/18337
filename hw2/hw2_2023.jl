@@ -13,9 +13,6 @@ using LinearAlgebra, BenchmarkTools, SparseArrays, PlutoTeachingTools
 student = (name = "Philip the Corgi", kerberos_id = "ptcorgi")
 
 
-# ╔═╡ 61ab7fb5-8a31-4ad3-96ca-62584843a1a6
-Base:.+(a::String,b::String)=a
-
 # ╔═╡ e5a1396f-03da-442d-a968-259effe56c84
 
 
@@ -108,7 +105,7 @@ begin
 end
 
 # ╔═╡ 9c384715-5bf5-4308-94ef-db4f26be45a4
-md"_Homework 2, version 1.2 -- 18.337 -- Spring  2023_"
+md"_Homework 2, version 1.3 -- 18.337 -- Spring  2023_"
 
 # ╔═╡ f8750fa4-8d49-4880-a53e-f40a653c84ea
 md"HW is to be submitted on Canvas in the form of a .jl file and .pdf file (use the browser print)"
@@ -121,7 +118,7 @@ HW2 release date: Saturday, Feb 18, 2023.
 
 **HW2 due date: This is short enough to be due, 
 Thursday, February 23, 2023, 11:59pm EST**, 
-but I will accept it as late as Tuesday March 1, 2023
+but I will accept it as late as Wednesday March 1, 2023
 given the holiday weekend (President's day) and all.
 """
 
@@ -392,7 +389,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.8.0-rc4"
 manifest_format = "2.0"
-project_hash = "355a1ed47a2eea235439ef2f57e7cacacc72888c"
+project_hash = "60edc7421f93de178f52ff63f0c3a390c9687e19"
 
 [[deps.AbstractPlutoDingetjes]]
 deps = ["Pkg"]
@@ -734,10 +731,9 @@ version = "17.4.0+0"
 
 # ╔═╡ Cell order:
 # ╠═1cc606d4-4788-426a-88bc-3d0c387bfb78
-# ╠═9c384715-5bf5-4308-94ef-db4f26be45a4
+# ╟─9c384715-5bf5-4308-94ef-db4f26be45a4
 # ╠═7679b2c5-a644-4341-a7cc-d1335727aacd
 # ╟─f8750fa4-8d49-4880-a53e-f40a653c84ea
-# ╠═61ab7fb5-8a31-4ad3-96ca-62584843a1a6
 # ╟─bec48cfd-ac3b-4dae-973f-cf529b3cdc05
 # ╟─bee4cd12-8ba4-4c43-b1d6-3e686f914e44
 # ╠═3f924a9c-c0f9-41e9-b96b-cc5f5de6cefa
