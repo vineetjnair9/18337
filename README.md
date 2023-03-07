@@ -58,7 +58,7 @@ Final Project reports due: May 15
 |5|T|2/21| Intro to PINNs and Automatic differentiation I : Forward mode AD | [3][3] and [8][8] | [ode and Pinns](https://mit-18337-spring2023.netlify.app/lecture5/ode_simple.html),[intro to pinn handwritten notes](https://github.com/mitmath/18337/blob/master/lecture5/1071_230222012837_001.pdf),[autodiff handwritten notes](https://github.com/mitmath/JuliaComputation/blob/ec6861bc9396d2b577f1bbc8136683d4298d7dc8/slides/ad_handwritten.pdf)
 |6|W|2/22| Automatic differentiation II : Reverse mode AD |[10][10]|  [pinn.jl](https://github.com/mitmath/18337/blob/master/lecture5/pinn.jl), [reverse mode ad demo](https://simeonschaub.github.io/ReverseModePluto/notebook.html),[handwritten notes](https://github.com/mitmath/18337/blob/master/lecture6/ handwritten%20reverse%20mode.pdf)|
 |7|M|2/27 |  Dynamical Systems & Serial Performance on Iterations |  [4][4] | [Lorenz many ways](https://github.com/mitmath/18337/blob/master/lecture7/LorenzManyWays.jl), [Dynamical Systems](https://mitmath.github.io/18337/lecture7/dynamics.html), [handwriten notes](https://github.com/mitmath/18337/blob/master/lecture7/lecture7%20handwritten%20notes.pdf) |
-|8|W|3/1|  Threading | [5][5] and [6][6] | HPC &  Threading   | hello world |
+|8|W|3/1|  Threading | [5][5] and [6][6] | HPC and Threading   | hello world |
 |9|M|3/6| Parallelism|       |   [Parallelism in Julia Slides](https://docs.google.com/presentation/d/1kBYvDedm_VGZEdjhSLXSCPLec6N7fLZswcYENqwiw3k/edit#slide=id.p) |
 
 <!--
