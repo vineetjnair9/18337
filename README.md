@@ -59,6 +59,8 @@ Final Project reports due: May 15
 |6|W|2/22| Automatic differentiation II : Reverse mode AD |[10][10]|  [pinn.jl](https://github.com/mitmath/18337/blob/master/lecture5/pinn.jl), [reverse mode ad demo](https://simeonschaub.github.io/ReverseModePluto/notebook.html),[handwritten notes](https://github.com/mitmath/18337/blob/master/lecture6/ handwritten%20reverse%20mode.pdf)|
 |7|M|2/27 |  Dynamical Systems & Serial Performance on Iterations |  [4][4] | [Lorenz many ways](https://github.com/mitmath/18337/blob/master/lecture7/LorenzManyWays.jl), [Dynamical Systems](https://mitmath.github.io/18337/lecture7/dynamics.html), [handwriten notes](https://github.com/mitmath/18337/blob/master/lecture7/lecture7%20handwritten%20notes.pdf) |
 |8|W|3/1|  Threading | [5][5] and [6][6] |    (TBA) |
+|9|M|3/6| Parallelism|       |   (Parallelism in Julia Slides)[https://docs.google.com/presentation/d/1kBYvDedm_VGZEdjhSLXSCPLec6N7fLZswcYENqwiw3k/edit#slide=id.p] |
+
 <!--
 |4|W|2/15| Automatic differentiation I : Forward mode AD |[8][8] |   [[video 1]](https://youtu.be/C3vf9ZFYbjI)      [[video2]](https://youtu.be/hKHl68Fdpq4) 
 -->
