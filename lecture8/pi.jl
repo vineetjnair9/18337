@@ -1,5 +1,5 @@
-import Base.Threads
-using Distributions
+
+using Distributions, Base.Threads, BenchmarkTools
 
 
 """
@@ -19,10 +19,23 @@ function estimate_pi(n)
 	return 4*count/n
 end
 
+function estimate_pi_inner_threads(n)
+	counts = zeros(Int,Threads.nthreads())
+	@threads for i=1:n		
+		x = rand(Uniform(-1.0, 1.0))
+		y = rand(Uniform(-1.0, 1.0))
+		counts[Threads.threadid()] += (x^2 + y^2) <= 1
+	end
+	
+	return 4*sum(counts)/n
+end
+
+
 
 """
 Compute pi in parallel, over ncores cores, with a Monte Carlo simulation throwing N total darts
 """
+# number 1
 function estimate_pi_tasks_vector(N::Int)
 	ntasks = Base.Threads.nthreads()
 	slices_of_pi = Vector{Float64}(undef, ntasks)
@@ -34,11 +47,33 @@ function estimate_pi_tasks_vector(N::Int)
     return sum(slices_of_pi) / ntasks
 end
 
+# number 6
+function estimate_pi_6(N::Int)
+	ntasks = Base.Threads.nthreads()
+	slices_of_pi = Vector{Float64}(undef, ntasks)
+	n = N ÷ ntasks
 
+	Threads.@threads for tid in 1:ntasks
+		 slices_of_pi[tid] = estimate_pi(n)
+	end
+    return sum(slices_of_pi) / ntasks
+end
+
+import ThreadsX
+
+function throw_dart() 
+	x = rand(Uniform(-1.0, 1.0))
+	y = rand(Uniform(-1.0, 1.0))
+	return (x^2 + y^2) <= 1
+end
+
+estimate_pi_ThreadX(N) =ThreadsX.sum( _->throw_dart() , 1:N )*4/N
+#ThreadsX(_->throw_dart(),1:N)
 
 """
 Compute pi in parallel, over ncores cores, with a Monte Carlo simulation throwing N total darts with channels
 """
+# number 2
 function estimate_pi_tasks_channel(N::Int)
 	ntasks = Base.Threads.nthreads()
 	ch = Channel{Float64}(ntasks)
@@ -64,6 +99,7 @@ function estimatepi(n)
 Runs a simple Monte Carlo method
 to estimate pi with n samples.
 """
+# number 3
 function estimate_pi_atomic(n)
 	count = Counter(0)
 	Threads.@threads for i=1:n
@@ -74,6 +110,7 @@ function estimate_pi_atomic(n)
 	return 4*count.val/n
 end
 
+# number 4
 function estimate_pi_tasks_atomic(N::Int)
 	ntasks = Base.Threads.nthreads()
 	#slices_of_pi = Vector{Float64}(undef, ntasks)
@@ -87,15 +124,29 @@ function estimate_pi_tasks_atomic(N::Int)
     return sum.val / ntasks
 end
 
+# number 5
+function estimate_pi_5(N::Int)
+	v = zeros(N)
+	Threads.@threads for i ∈ 1:N
+		v[i] = estimate_pi(1)
+	end	
+	return sum(v)/N
+end
 
-N = 200000
 
 
-serial = @elapsed estimate_pi(N)
-pchannel = @elapsed estimate_pi_tasks_channel(N)
-pvector = @elapsed estimate_pi_tasks_vector(N)
-patomic = @elapsed estimate_pi_atomic(N)
-ptasksatomic = @elapsed estimate_pi_tasks_atomic
+N = 2_000_000
 
 
-pvector/serial, pchannel/serial, patomic/serial, ptasksatomic/serial
+serial = @belapsed estimate_pi(N) seconds=1
+pchannel = @belapsed estimate_pi_tasks_channel(N)  seconds=1
+pvector = @belapsed estimate_pi_tasks_vector(N)  seconds=1
+patomic = @belapsed estimate_pi_atomic(N)  seconds=1
+ptasksatomic = @belapsed estimate_pi_tasks_atomic(N) seconds=1
+p5 = @belapsed estimate_pi_5(N) seconds=1
+p6 = @belapsed estimate_pi_6(N) seconds=1
+p7 = @belapsed estimate_pi_inner_threads(N) seconds=1
+p8 = @belapsed estimate_pi_ThreadX(N) seconds=1
+
+
+pvector/serial, pchannel/serial, patomic/serial, ptasksatomic/serial, p5/serial, p6/serial, p7/serial, p8/serial

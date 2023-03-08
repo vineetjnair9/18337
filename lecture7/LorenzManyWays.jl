@@ -143,7 +143,7 @@ function solve_system_save(f,u0,p,n)
 end
 @btime solve_system_save(lorenz3,@SVector[1.0,0.0,0.0],p,1000);
 
-# people ike inbounds, i don't find it saves that much that often, but sometimes.
+# people like inbounds, i don't find it saves that much that often, but sometimes.
 function lorenz4(u,p)
     α,σ,ρ,β = p
     @inbounds begin
@@ -153,6 +153,7 @@ function lorenz4(u,p)
     end
     @SVector [du1,du2,du3]
   end
+
   function solve_system_save(f,u0,p,n)
     u = Vector{typeof(u0)}(undef,n)
     @inbounds u[1] = u0
