@@ -61,6 +61,11 @@ Final Project reports due: May 15
 |8|W|3/1|  HPC & Threading | [5][5] and [6][6] | [pi.jl](https://github.com/mitmath/18337/blob/master/lecture8/pi.jl), [threads.jl](https://github.com/mitmath/18337/blob/master/lecture8/threads.jl),[HPC Slides](https://docs.google.com/presentation/d/1i6w4p26r_9lu_reHYZDIVnzh-4SdERVAoSI5i42lBU8/edit#slide=id.p)   |
 |9|M|3/6| Parallelism|       |   [Parallelism in Julia Slides](https://docs.google.com/presentation/d/1kBYvDedm_VGZEdjhSLXSCPLec6N7fLZswcYENqwiw3k/edit#slide=id.p),[reduce/prefix notebook](https://mitmath.github.io/18337/lecture9/reduce_prefix.html)|
 |10|W| 3/8| Prefix (and more) ||[ppt slides](https://github.com/mitmath/18337/blob/master/lecture10/prefix.pptx), [reduce/prefix notebook](https://mitmath.github.io/18337/lecture9/reduce_prefix.html),[ThreadedScans.jl](https://github.com/JuliaFolds/ThreadedScans.jl),[cuda blog](https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda)|
+|11|M|3/13| Adjoint Method Example | [10][10] |
+|12|W|3/15| Guest Lecture - Chris Rackauckas |
+|13|
+|14|
+|Spring Break|
 
 <!--
 |4|W|2/15| Automatic differentiation I : Forward mode AD |[8][8] |   [[video 1]](https://youtu.be/C3vf9ZFYbjI)      [[video2]](https://youtu.be/hKHl68Fdpq4) 
