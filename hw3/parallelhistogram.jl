@@ -13,19 +13,19 @@ end
 
 TracyWidomPDF_via_Fredholm_Det(s) = ForwardDiff.derivative( t->det(I-K(t)),s)
 
-t = 300 # change to 10_000 slowly when ready
+t = 10_000; # change to 10_000 slowly when ready
 
-n = 6^6
-dx = 1/6
-v = zeros(t)
-
+n = 6^6;
+dx = 1/6;
+v = zeros(t);
 
 ## Experiment
 v = zeros(t)
 Threads.@threads for i ∈ 1:t
-    v[i] = patiencesort1(randperm(n)) # use your fastest function here
+    v[i] = patiencesort2(randperm(n)); # use your fastest function here
 end
-w = (v .- 2sqrt(n+.5)) ./ (n^(1/6))
+
+w = (v .- 2sqrt(n+.5)) ./ (n^(1/6));
 histogram(w, normalized=true, bins=-4.5:dx:2)
 
 plot!(TracyWidomPDF_via_Fredholm_Det, -5.0, 2, label="Theory", lw=3)

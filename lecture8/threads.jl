@@ -1,15 +1,12 @@
 using Base.Threads, BenchmarkTools, Statistics, StaticArrays
 const N = 1_000
 
-
 ## Review from the end of last lecture
 ## best serial code was lorenz4 with solve_system_save!
 ## @SVector puts the length 3 vector on the stack
 ## @inbounds doesn't hurt, may not help much
 ## there were NO allocations as it used mutation
 ## specifically we preallocate a vector u that will contain N Svectors
-## 
-
 
   function lorenz4(u,p)
     α,σ,ρ,β = p
