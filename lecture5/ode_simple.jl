@@ -64,7 +64,7 @@ A Simple scalar Neural Network
 "
 
 # ╔═╡ cc400188-61b0-40db-9e30-5bf9037e66fb
-n = 3
+n = 10
 
 # ╔═╡ 3aa77c1a-1cb0-46ac-a2ed-a4f302e37ddc
 begin
@@ -96,7 +96,7 @@ Flux.params(NNODE).params
 
 # ╔═╡ 54d73b57-5148-474e-91eb-03a1a0bce826
 md"
-Let's solve u'=cos(2πt), u(0)=1
+Let's solve u'=sin(2πt), u(0)=1
 "
 
 # ╔═╡ db723fe1-836a-4d44-acd9-5a451d4aa2e1
@@ -106,7 +106,7 @@ g(t) = t*NNODE(t) + 1f0
 begin
 	using Statistics # for the loss
 	ϵ = sqrt(eps(Float32))
-	loss() = mean(abs2(((g(t+ϵ)-g(t))/ϵ) - cos(2π*t)) for t in 0:1f-2:1f0)
+	loss() = mean(abs2(((g(t+ϵ)-g(t))/ϵ) - sin(2π*t)) for t in 0:1f-2:1f0)
 end
 
 # ╔═╡ 766121a7-2cf3-42cc-bc2d-7a97bfdaa482
@@ -128,7 +128,7 @@ end
 begin
 	t = 0:0.001:1.0
 	plot(t,g.(t),label="NN")
-	plot!(t,1.0 .+ sin.(2π.*t)/2π, label = "True Solution")
+	plot!(t,1.0 +1/(2π) .- cos.(2π.*t)/2π, label = "True Solution")
 end
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
@@ -153,7 +153,7 @@ PLUTO_MANIFEST_TOML_CONTENTS = """
 
 julia_version = "1.8.0-rc4"
 manifest_format = "2.0"
-project_hash = "e16b41180ab0d2bac8890f974e2cb974f1d12707"
+project_hash = "d4100d2419f27b1e235ecbfdca653bab27b69c4d"
 
 [[deps.AbstractFFTs]]
 deps = ["ChainRulesCore", "LinearAlgebra"]
