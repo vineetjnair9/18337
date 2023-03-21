@@ -63,7 +63,7 @@ Final Project reports due: May 15
 |10|W| 3/8| Prefix (and more) ||[ppt slides](https://github.com/mitmath/18337/blob/master/lecture10/prefix.pptx), [reduce/prefix notebook](https://mitmath.github.io/18337/lecture9/reduce_prefix.html),[ThreadedScans.jl](https://github.com/JuliaFolds/ThreadedScans.jl),[cuda blog](https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda)|
 |11|M|3/13| Adjoint Method Example | [10][10] | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2011/adjoint%20handwritten%20notes.pdf)|
 |12|W|3/15| Guest Lecture - Chris Rackauckas |
-|13|M|3/21 |  Vectors, Operators and Adjoints | [Handwritten Notes]
+|13|M|3/21 |  Vectors, Operators and Adjoints | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture14/handwritten_notes_vectors_adjoints.pdf)
 |14|
 |Spring Break|
 
