@@ -64,7 +64,7 @@ Final Project reports due: May 15
 |11|M|3/13| Adjoint Method Example | [10][10] | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2011/adjoint%20handwritten%20notes.pdf)|
 |12|W|3/15| Guest Lecture - Chris Rackauckas |
 |13|M|3/21 |  Vectors, Operators and Adjoints | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture14/handwritten_notes_vectors_adjoints.pdf)
-|14|
+|14|W|3/23 |
 |Spring Break|
 
 <!--
