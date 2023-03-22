@@ -63,8 +63,8 @@ Final Project reports due: May 15
 |10|W| 3/8| Prefix (and more) ||[ppt slides](https://github.com/mitmath/18337/blob/master/lecture10/prefix.pptx), [reduce/prefix notebook](https://mitmath.github.io/18337/lecture9/reduce_prefix.html),[ThreadedScans.jl](https://github.com/JuliaFolds/ThreadedScans.jl),[cuda blog](https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda)|
 |11|M|3/13| Adjoint Method Example | [10][10] | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2011/adjoint%20handwritten%20notes.pdf)|
 |12|W|3/15| Guest Lecture - Chris Rackauckas |
-|13|M|3/21 |  Vectors, Operators and Adjoints | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture14/handwritten_notes_vectors_adjoints.pdf)
-|14|W|3/23 |
+|13|M|3/21 |  Vectors, Operators and Adjoints | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture14/handwritten_notes_vectors_adjoints.pdf) |
+|14|W|3/23 |  Adjoints of Linear, Nonlinear, Ode | [11][11] |  [18.335 adjoint notes (Johnson)](https://math.mit.edu/~stevenj/18.336/adjoint.pdf)|
 |Spring Break|
 
 <!--
@@ -106,7 +106,7 @@ Final Project reports due: May 15
 [8]:https://book.sciml.ai/notes/08-Forward-Mode_Automatic_Differentiation_(AD)_via_High_Dimensional_Algebras/
 [9]:https://book.sciml.ai/notes/09/
 [10]:https://book.sciml.ai/notes/10-Basic_Parameter_Estimation-Reverse-Mode_AD-and_Inverse_Problems/
-[11]:https://book.sciml.ai/notes/11/
+[11]:https://book.sciml.ai/notes/11-Differentiable_Programming_and_Neural_Differential_Equations/
 [13]:https://book.sciml.ai/notes/13/
 [14]:https://book.sciml.ai/notes/14/
 [15]:https://book.sciml.ai/notes/15/
