@@ -48,7 +48,7 @@ Final Project reports due: May 15
 |2| [HW2](https://mitmath.github.io/18337/hw2/hw2_2023.html) Due Wednesday March 1, 2023
 |3| [HW3](https://github.com/mitmath/18337/blob/master/hw3/18_337_2023_pset3.pdf ) | Due Wednesday March 15, 2023
 
-# Lecture Schedule (tentative) (Warning: links currently out of phase starting with lecture 7)
+# Lecture Schedule (tentative)
 |#|Day| Date |  Topic | [SciML](https://book.sciml.ai/) lecture | Materials |
 |-|-|------|------|-----|--|
 |1|M| 2/6 | Intro to Julia.  My Two Favorite Notebooks. |  |   [[Julia is fast]](https://github.com/mitmath/18337/blob/master/lecture1/Julia%20is%20fast.ipynb), [[AutoDiff]](https://github.com/mitmath/18337/blob/master/lecture1/AutoDiff.ipynb), [[autodiff video]](https://www.youtube.com/watch?v=vAp6nUMrKYg),
@@ -70,6 +70,19 @@ Final Project reports due: May 15
 <!--
 |4|W|2/15| Automatic differentiation I : Forward mode AD |[8][8] |   [[video 1]](https://youtu.be/C3vf9ZFYbjI)      [[video2]](https://youtu.be/hKHl68Fdpq4) 
 -->
+|15|M|4/3| 
+|16|W|4/5| Guest Lecture, Keaton Burns |
+|17|M|4/10|
+|18|W|4/12|
+|  |M|4/17| Patriots' Day
+|19|W|4/19|  
+|20|M|4/24|
+|21|W|4/26| Project Presentation I |
+|22|M|5/1| Project Presentation II | 
+|23|W|5/3| Project Presentation III | 
+|24|M|5/8|  Project Presentation IV |  
+|25|W|5/10| Project Presentation V |
+|  |M|5/15| Class Likely Cancelled |
 
 
 
