@@ -66,7 +66,7 @@ Final Project reports due: May 15
 |13|M|3/21 |  Vectors, Operators and Adjoints | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture14/handwritten_notes_vectors_adjoints.pdf) |
 |14|W|3/23 |  Adjoints of Linear, Nonlinear, Ode | [11][11] | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2014/adjoint%20equations.pdf), [18.335 adjoint notes (Johnson)](https://math.mit.edu/~stevenj/18.336/adjoint.pdf)|
 |Spring Break|
-|15|M|4/3| 
+|15|M|4/3| Guest Lecture, Billy Moses |
 |16|W|4/5| Guest Lecture, Keaton Burns |
 |17|M|4/10|
 |18|W|4/12|
