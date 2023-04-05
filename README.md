@@ -47,6 +47,7 @@ Final Project reports due: May 15
 (For matrix calculus problems, do not use indices)
 |2| [HW2](https://mitmath.github.io/18337/hw2/hw2_2023.html) Due Wednesday March 1, 2023
 |3| [HW3](https://github.com/mitmath/18337/blob/master/hw3/18_337_2023_pset3.pdf ) | Due Wednesday March 15, 2023
+|4| [HW4](https://github.com/mitmath/18337/blob/master/hw4.pdf) | Due April 18, 2023 |
 
 # Lecture Schedule (tentative)
 |#|Day| Date |  Topic | [SciML](https://book.sciml.ai/) lecture | Materials |
