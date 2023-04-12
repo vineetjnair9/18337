@@ -38,7 +38,7 @@ You can do `[vec.(B_NN(y))...]` to flatten and for unflattening, use slicing and
 Notice that equations (36) to (41) give expressions for `W̄₁, W̄₂, b̄₁, b̄₂` but while `x` serves as the `u` , in those equations it is not considered a parameter and so you will have to figure out the right expression for `ū`.
 Hint: `u` just appears as matrix times vector, so perhaps looking at equation (38) might help you see the right answer.
 
-* Part 3:  you can do Part 2 yourself if you like, or use ForwardDiff.jl or Zygote. jl if you like.
+## Part 3:  you can do Part 2 yourself if you like, or use ForwardDiff.jl or Zygote. jl if you like.
 
 * Part 3: Use https://diffeq.sciml.ai/stable/features/callback_library/#PresetTimeCallback for adding the jumps for $\lambda$.  A nice example of difeqs with jumps and how to run the software
 may be found here: https://diffeq.sciml.ai/stable/features/callback_functions/#PresetTimeCallback .
