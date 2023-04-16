@@ -69,8 +69,8 @@ Final Project reports due: May 15
 |Spring Break|
 |15|M|4/3| Guest Lecture, Billy Moses |
 |16|W|4/5| Guest Lecture, Keaton Burns |
-|17|M|4/10|
-|18|W|4/12|
+|17|M|4/10| Adjoints of ODE | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2017/handwritten%20notes%20adjoint.pdf) |
+|18|W|4/12| Partitioning | | |
 |  |M|4/17| Patriots' Day
 |19|W|4/19|  
 |20|M|4/24|
