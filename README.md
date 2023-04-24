@@ -45,10 +45,11 @@ Final Project reports due: May 15
 |-|-|
 |1| [HW1](https://mitmath.github.io/18337/hw1/hw1.html) |
 (For matrix calculus problems, do not use indices)
-|2| [HW2](https://mitmath.github.io/18337/hw2/hw2_2023.html) Due Wednesday March 1, 2023
-|3| [HW3](https://github.com/mitmath/18337/blob/master/hw3/18_337_2023_pset3.pdf ) | Due Wednesday March 15, 2023
+|2| [HW2](https://mitmath.github.io/18337/hw2/hw2_2023.html) Due Wednesday March 1, 2023 |
+|3| [HW3](https://github.com/mitmath/18337/blob/master/hw3/18_337_2023_pset3.pdf )  Due Wednesday March 15, 2023|
+|4| [HW4](https://github.com/mitmath/18337/blob/master/hw4.pdf) Due Wednesday April 19, 2023 |
 
-# Lecture Schedule (tentative) (Warning: links currently out of phase starting with lecture 7)
+# Lecture Schedule (tentative)
 |#|Day| Date |  Topic | [SciML](https://book.sciml.ai/) lecture | Materials |
 |-|-|------|------|-----|--|
 |1|M| 2/6 | Intro to Julia.  My Two Favorite Notebooks. |  |   [[Julia is fast]](https://github.com/mitmath/18337/blob/master/lecture1/Julia%20is%20fast.ipynb), [[AutoDiff]](https://github.com/mitmath/18337/blob/master/lecture1/AutoDiff.ipynb), [[autodiff video]](https://www.youtube.com/watch?v=vAp6nUMrKYg),
@@ -56,20 +57,29 @@ Final Project reports due: May 15
 |3|M|2/13| Matrix Calculus II || [[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture3/lecture_3_handwritten_2023.pdf),[[Corgi in the Washing Machine]](https://mit-c25.netlify.app/notebooks/1_hyperbolic_corgi),[[2x2 Matrix Jacobians]](https://rawcdn.githack.com/mitmath/matrixcalc/3f6758996e40c5c1070279f89f7f65e76e08003d/notes/2x2Jacobians.jl.html)
 |4|W|2/15| Serial Performance | [2][2] |[[handwritten notes]](https://github.com/mitmath/18337/blob/master/lecture4/lecture_4_handwritten_2023.pdf), [[Serial Performance .jl file]](https://github.com/mitmath/18337/blob/master/lecture4/serial%20performance.jl), [[Loop Fusion Blog ]](https://julialang.org/blog/2017/01/moredots/)
 |5|T|2/21| Intro to PINNs and Automatic differentiation I : Forward mode AD | [3][3] and [8][8] | [ode and Pinns](https://mit-18337-spring2023.netlify.app/lecture5/ode_simple.html),[intro to pinn handwritten notes](https://github.com/mitmath/18337/blob/master/lecture5/1071_230222012837_001.pdf),[autodiff handwritten notes](https://github.com/mitmath/JuliaComputation/blob/ec6861bc9396d2b577f1bbc8136683d4298d7dc8/slides/ad_handwritten.pdf)
-|6|W|2/22| Automatic differentiation II : Reverse mode AD |[10][10]|  [pinn.jl](https://github.com/mitmath/18337/blob/master/lecture5/pinn.jl), [reverse mode ad demo](https://simeonschaub.github.io/ReverseModePluto/notebook.html),[handwritten notes](https://github.com/mitmath/18337/blob/master/lecture6/ handwritten%20reverse%20mode.pdf)|
+|6|W|2/22| Automatic differentiation II : Reverse mode AD |[10][10]|  [pinn.jl](https://github.com/mitmath/18337/blob/master/lecture5/pinn.jl), [reverse mode ad demo](https://simeonschaub.github.io/ReverseModePluto/notebook.html),[handwritten notes](https://github.com/mitmath/18337/blob/master/lecture6/handwritten%20reverse%20mode.pdf)|
 |7|M|2/27 |  Dynamical Systems & Serial Performance on Iterations |  [4][4] | [Lorenz many ways](https://github.com/mitmath/18337/blob/master/lecture7/LorenzManyWays.jl), [Dynamical Systems](https://mitmath.github.io/18337/lecture7/dynamics.html), [handwriten notes](https://github.com/mitmath/18337/blob/master/lecture7/lecture7%20handwritten%20notes.pdf) |
 |8|W|3/1|  HPC & Threading | [5][5] and [6][6] | [pi.jl](https://github.com/mitmath/18337/blob/master/lecture8/pi.jl), [threads.jl](https://github.com/mitmath/18337/blob/master/lecture8/threads.jl),[HPC Slides](https://docs.google.com/presentation/d/1i6w4p26r_9lu_reHYZDIVnzh-4SdERVAoSI5i42lBU8/edit#slide=id.p)   |
 |9|M|3/6| Parallelism|       |   [Parallelism in Julia Slides](https://docs.google.com/presentation/d/1kBYvDedm_VGZEdjhSLXSCPLec6N7fLZswcYENqwiw3k/edit#slide=id.p),[reduce/prefix notebook](https://mitmath.github.io/18337/lecture9/reduce_prefix.html)|
 |10|W| 3/8| Prefix (and more) ||[ppt slides](https://github.com/mitmath/18337/blob/master/lecture10/prefix.pptx), [reduce/prefix notebook](https://mitmath.github.io/18337/lecture9/reduce_prefix.html),[ThreadedScans.jl](https://github.com/JuliaFolds/ThreadedScans.jl),[cuda blog](https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda)|
 |11|M|3/13| Adjoint Method Example | [10][10] | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2011/adjoint%20handwritten%20notes.pdf)|
 |12|W|3/15| Guest Lecture - Chris Rackauckas |
-|13|
-|14|
+|13|M|3/21 |  Vectors, Operators and Adjoints | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture14/handwritten_notes_vectors_adjoints.pdf) |
+|14|W|3/23 |  Adjoints of Linear, Nonlinear, Ode | [11][11] | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2014/adjoint%20equations.pdf), [18.335 adjoint notes (Johnson)](https://math.mit.edu/~stevenj/18.336/adjoint.pdf)|
 |Spring Break|
-
-<!--
-|4|W|2/15| Automatic differentiation I : Forward mode AD |[8][8] |   [[video 1]](https://youtu.be/C3vf9ZFYbjI)      [[video2]](https://youtu.be/hKHl68Fdpq4) 
--->
+|15|M|4/3| Guest Lecture, Billy Moses | | [Enzyme AD](https://enzyme.mit.edu/) |
+|16|W|4/5| Guest Lecture, Keaton Burns | | [Dedalus PDE Solver](https://dedalus-project.org/) |
+|17|M|4/10| Adjoints of ODE | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2017/handwritten%20notes%20adjoint.pdf) |
+|18|W|4/12| Partitioning | | |
+|  |M|4/17| Patriots' Day
+|19|W|4/19|  Fast Multipole and Parallel Prefix | |[Unfinished Draft](https://math.mit.edu/~edelman/publications/fast_multipole.pdf) | 
+|20|M|4/24|
+|21|W|4/26| Project Presentation I |
+|22|M|5/1| Project Presentation II | 
+|23|W|5/3| Project Presentation III | 
+|24|M|5/8|  Project Presentation IV |  
+|25|W|5/10| Project Presentation V |
+|  |M|5/15| Class  Cancelled |
 
 
 
@@ -106,7 +116,7 @@ Final Project reports due: May 15
 [8]:https://book.sciml.ai/notes/08-Forward-Mode_Automatic_Differentiation_(AD)_via_High_Dimensional_Algebras/
 [9]:https://book.sciml.ai/notes/09/
 [10]:https://book.sciml.ai/notes/10-Basic_Parameter_Estimation-Reverse-Mode_AD-and_Inverse_Problems/
-[11]:https://book.sciml.ai/notes/11/
+[11]:https://book.sciml.ai/notes/11-Differentiable_Programming_and_Neural_Differential_Equations/
 [13]:https://book.sciml.ai/notes/13/
 [14]:https://book.sciml.ai/notes/14/
 [15]:https://book.sciml.ai/notes/15/
