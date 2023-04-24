@@ -72,7 +72,7 @@ Final Project reports due: May 15
 |17|M|4/10| Adjoints of ODE | | [Handwritten Notes](https://github.com/mitmath/18337/blob/master/lecture%2017/handwritten%20notes%20adjoint.pdf) |
 |18|W|4/12| Partitioning | | |
 |  |M|4/17| Patriots' Day
-|19|W|4/19|  Fast Multipole and Parallel Prefix | [Unfinished Draft](https://math.mit.edu/~edelman/publications/fast_multipole.pdf) | 
+|19|W|4/19|  Fast Multipole and Parallel Prefix | |[Unfinished Draft](https://math.mit.edu/~edelman/publications/fast_multipole.pdf) | 
 |20|M|4/24|
 |21|W|4/26| Project Presentation I |
 |22|M|5/1| Project Presentation II | 
