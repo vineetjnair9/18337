@@ -79,7 +79,7 @@ Final Project reports due: May 15
 |23|W|5/3| Project Presentation III | 
 |24|M|5/8|  Project Presentation IV |  
 |25|W|5/10| Project Presentation V |
-|  |M|5/15| Class Likely Cancelled |
+|  |M|5/15| Class  Cancelled |
 
 
 
